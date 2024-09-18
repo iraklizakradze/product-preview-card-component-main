@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+
+:root {
+
+    /* ### Primary */
+
+    --Darkcyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+
+    /* ### Neutral */
+
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Cream);
+    font-family: "Montserrat", sans-serif;
+}
+
+img {
+    width: 300px;
+    /* border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px; */
+    border-radius: 10px 0px 0px 10px;
+}
+
+p {
+    font-size: 14px;
+    color: var(--Darkgrayishblue);
+    font-weight: 600;
+    line-height: 1.4rem;
+}
+
+button {
+    color: var(--White);
+    background-color: var(--Darkcyan);
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    font-size: .9rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    gap: .3rem;
+}
+
+button::before {
+    content: url('./images/icon-cart.svg');
+}   
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--White);
+    border-radius: 10px;
+}
+
+.product__content {
+    display: grid;
+    padding: 2rem;
+    gap: 1.8em;
+}
+
+.flex-group {
+    display: flex;
+    gap: 1em;
+}
+
+.product__header {
+    font-size: .8rem;
+    letter-spacing: .2rem;
+    font-weight: 600;
+    color: var(--Darkcyan);
+}
+
+.product__title {
+    font-family: "Fraunces", serif;
+    font-weight: 800;
+    line-height: 1.9rem;
+    color: var(--Verydarkblue);
+}
+
+.product__price {
+    font-family: "Fraunces", serif;
+    font-size: 2rem;
+    color: var(--Darkcyan);
+    font-weight: 800;
+}
+
+.product__original-price {
+    text-decoration: line-through;
+}
